@@ -24,7 +24,7 @@ RUN curl -fSsL -o /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/re
 # Install Buildifier
 ARG BUILDIFIER_VERSION=4.2.4
 ARG BUILDIFIER_DOWNLOAD_SHA=dev-mode
-RUN curl -fSsL -o /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/${BUILDIFIER_VERSION}/buildifier-linux-amd644 \
+RUN curl -fSsL -o /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/${BUILDIFIER_VERSION}/buildifier-linux-amd64 \
     && ([ "${BUILDIFIER_DOWNLOAD_SHA}" = "dev-mode" ] || echo "${BUILDIFIER_DOWNLOAD_SHA} */usr/local/bin/buildifier" | sha256sum --check - ) \
     && chmod 0755 /usr/local/bin/buildifier
 
