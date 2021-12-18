@@ -29,5 +29,5 @@ RUN curl -fSsL -o /usr/local/bin/buildifier https://github.com/bazelbuild/buildt
     && chmod 0755 /usr/local/bin/buildifier
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends python3-pip
